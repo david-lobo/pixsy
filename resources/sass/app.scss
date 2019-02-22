@@ -1,0 +1,117 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+@import "node_modules/font-awesome/scss/font-awesome.scss";
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+@import '~dropzone/dist/dropzone.css';
+
+@import '~dropzone/dist/basic.css';
+
+@import '~bootstrap4c-dropzone/dist/css/component-dropzone.css';
+
+@import '~toastr/toastr.scss';
+
+@import '~ekko-lightbox/dist/ekko-lightbox.css';
+
+a {
+    color: inherit;
+
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+p.teaser {
+    text-indent: 30px;
+}
+
+td form {
+    display: inline-block;
+}
+
+
+.page-load-status {
+  display: none; /* hidden by default */
+  padding-top: 20px;
+  border-top: 1px solid #DDD;
+  text-align: center;
+  color: #777;
+}
+
+.gallery-wrapper {
+  overflow: hidden;
+}
+
+.grid-item {
+  padding-bottom: 3rem;
+}
+
+.sidebar {
+  text-align: center;
+  padding: 1rem;
+  background: red;
+  height: 900px;
+}
+
+.loader-ellips {
+  font-size: 20px; /* change size here */
+  position: relative;
+  width: 4em;
+  height: 1em;
+  margin: 10px auto;
+}
+
+.loader-ellips__dot {
+  display: block;
+  width: 1em;
+  height: 1em;
+  border-radius: 0.5em;
+  background: #555; /* change color here */
+  position: absolute;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+.loader-ellips__dot:nth-child(1),
+.loader-ellips__dot:nth-child(2) {
+  left: 0;
+}
+.loader-ellips__dot:nth-child(3) { left: 1.5em; }
+.loader-ellips__dot:nth-child(4) { left: 3em; }
+
+@keyframes reveal {
+  from { transform: scale(0.001); }
+  to { transform: scale(1); }
+}
+
+@keyframes slide {
+  to { transform: translateX(1.5em) }
+}
+
+.loader-ellips__dot:nth-child(1) {
+  animation-name: reveal;
+}
+
+.loader-ellips__dot:nth-child(2),
+.loader-ellips__dot:nth-child(3) {
+  animation-name: slide;
+}
+
+.loader-ellips__dot:nth-child(4) {
+  animation-name: reveal;
+  animation-direction: reverse;
+}
